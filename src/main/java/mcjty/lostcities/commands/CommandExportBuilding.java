@@ -151,6 +151,6 @@ public class CommandExportBuilding implements ICommand {
     }
 
     public static class Slice {
-        String sequence[] = new String[256];
+        String[] sequence = new String[256];
     }
 }

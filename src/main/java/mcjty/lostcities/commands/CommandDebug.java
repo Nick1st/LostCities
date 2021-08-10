@@ -11,8 +11,6 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.WorldServer;
-import net.minecraft.world.gen.ChunkProviderServer;
 
 import javax.annotation.Nullable;
 import java.util.Collections;
@@ -60,8 +58,8 @@ public class CommandDebug implements ICommand {
             System.out.println("getChestTodo().size() = " + info.getLootTodo().size());
             System.out.println("getMobSpawnerTodo().size() = " + info.getMobSpawnerTodo().size());
 
-            float reldist = CitySphere.getRelativeDistanceToCityCenter(info.chunkX, info.chunkZ, provider);
-            System.out.println("reldist = " + reldist);
+            float relativeDistance = CitySphere.getRelativeDistanceToCityCenter(info.chunkX, info.chunkZ, provider);
+            System.out.println("relativeDistance = " + relativeDistance);
 
             Railway.RailChunkInfo railInfo = Railway.getRailChunkType(info.chunkX, info.chunkZ, info.provider, info.profile);
             System.out.println("railInfo.getType() = " + railInfo.getType());

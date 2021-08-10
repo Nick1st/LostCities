@@ -62,7 +62,7 @@ public class CommandBuildPart implements ICommand {
                         if (state != null && state.getBlock() != Blocks.COMMAND_BLOCK) {
                             try {
                                 sender.getEntityWorld().setBlockState(pos, state, 3);
-                            } catch (Exception e) {
+                            } catch (Exception ignored) {
                             }
                         }
                     }
@@ -94,6 +94,6 @@ public class CommandBuildPart implements ICommand {
     }
 
     public static class Slice {
-        String sequence[] = new String[256];
+        String[] sequence = new String[256];
     }
 }

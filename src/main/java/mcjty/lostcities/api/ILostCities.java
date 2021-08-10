@@ -11,7 +11,7 @@ public interface ILostCities {
 
     /**
      * If the given dimension is handled by Lost Cities then this will return the chunk generator. It is strongly
-     * recommended to use this instead of the now deprecated technique of doing instanceof ILostChunkGenerator
+     * recommended using this instead of the now deprecated technique of doing instanceof ILostChunkGenerator
      * as this is not compatible with Sponge
      */
     @Nullable

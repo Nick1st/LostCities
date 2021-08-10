@@ -44,7 +44,7 @@ public class LostCityEvent extends Event {
     }
 
     /**
-     * CharacteristicsEvent is fired when Lost Cities tries to determine chunk chracteristics.<br>
+     * CharacteristicsEvent is fired when Lost Cities tries to determine chunk characteristics.<br>
      * This event is fired right when The Lost Cities tries to decide if a chunk should contain
      * a building and what type of building. All fields in the given characteristic object can be modified.
      * Note that you can get access to the asset registries for buildings, multi buildings, and city styles

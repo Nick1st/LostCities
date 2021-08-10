@@ -752,19 +752,20 @@ public class BuildingInfo implements ILostChunkInfo {
             if (provider.getProfile().isSpace() && CitySphere.intersectsWithCitySphere(chunkX, chunkZ, provider)) {
                 float reldest = CitySphere.getRelativeDistanceToCityCenter(chunkX, chunkZ, provider);
                 if (reldest > .6f) {
-                    f = Math.max(minfloors, f-2);
+                    f = Math.max(minfloors, f - 2);
                 } else if (reldest > .5f) {
-                    f = Math.max(minfloors, f-1);
+                    f = Math.max(minfloors, f - 1);
                 }
             }
 
             floors = f;
 
             int maxcellars = getMaxcellars(provider, cs);
-            int fb = profile.BUILDING_MINCELLARS + ((maxcellars <= 0) ? 0 : rand.nextInt(maxcellars));
+            int fb = Math.max(profile.BUILDING_MINCELLARS, buildingType.getMinCellars())
+                    + ((maxcellars <= 0) ? 0 : rand.nextInt(maxcellars));
             if (getMaxHighwayLevel() >= 0) {
                 // If we are above a highway we make sure we can't have too many cellars
-                fb = Math.min(cityLevel-getMaxHighwayLevel()-1, fb);
+                fb = Math.min(cityLevel - getMaxHighwayLevel() - 1, fb);
                 if (fb < 0) {
                     fb = 0;
                 }

@@ -167,7 +167,6 @@ public class LostCityConfiguration {
         profile.FOG_DENSITY = 0.02f;
         profile.EXPLOSION_CHANCE = 0;
         profile.MINI_EXPLOSION_CHANCE = 0;
-        profile.GENERATE_LIGHTING = true;
         profile.GENERATE_LAKES = false;
         profile.GENERATE_LIGHTING = true;
         profile.GENERATE_VILLAGES = false;

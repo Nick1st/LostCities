@@ -39,7 +39,7 @@ public interface ILostChunkInfo {
 
     /**
      * Get the level of the city/landscape at this point. 0 is the lowest level. You can get
-     * the real height uwing ILostChunkGenerator.getRealHeight(level).
+     * the real height using ILostChunkGenerator.getRealHeight(level).
      * If there is a building at this chunk then this is the level of the first floor.
      * If there is no city here then this represents a rough estimate of the height of the
      * terrain
@@ -54,7 +54,6 @@ public interface ILostChunkInfo {
 
     /**
      * Get the number of cellars of a building (below ground)
-     * @return
      */
     int getNumCellars();
 
@@ -62,10 +61,10 @@ public interface ILostChunkInfo {
     /**
      * Give an indication of how much damage a subchunk has gotten from explosions.
      * Subchunks are 16x16x16 chunks so chunkY*16 is the actual height. This will get
-     * the damage of the center of the subchunk
+     * the damage from the center of the subchunk
      * If this returns 0 there was no damage
      * Anything above 1 will completely destroy blocks
-     * Note that this damage is independent from the ruin system. Use getRuinLevel()
+     * Note that this damage is independent of the ruin system. Use getRuinLevel()
      * to detect that.
      */
     float getDamage(int chunkY);

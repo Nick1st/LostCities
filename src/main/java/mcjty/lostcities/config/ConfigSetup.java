@@ -3,8 +3,6 @@ package mcjty.lostcities.config;
 import mcjty.lostcities.LostCities;
 import mcjty.lostcities.setup.ModSetup;
 import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.fml.common.FMLLog;
-import org.apache.logging.log4j.Level;
 
 import java.io.File;
 import java.util.HashMap;
@@ -27,7 +25,7 @@ public class ConfigSetup {
 
             fixConfigs();
         } catch (Exception e1) {
-            FMLLog.log(Level.ERROR, e1, "Problem loading config file!");
+            LostCities.setup.getLogger().error("Problem loading config file!", e1);
         } finally {
             if (mainConfig.hasChanged()) {
                 mainConfig.save();
@@ -49,6 +47,7 @@ public class ConfigSetup {
             LostCityConfiguration.profiles.put(name, profile);
             profileConfigs.put(name, profileCfg);
         }
+        LostCityProfileJson.loadAll();
     }
 
     private static void fixConfigs() {

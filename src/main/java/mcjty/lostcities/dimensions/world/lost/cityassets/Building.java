@@ -17,11 +17,11 @@ public class Building implements ILostCityBuilding {
     private String name;
 
     private int minFloors = -1;         // -1 means default from level
-    private int minCellars = -1;        // -1 means default frmo level
+    private int minCellars = -1;        // -1 means default from level
     private int maxFloors = -1;         // -1 means default from level
-    private int maxCellars = -1;        // -1 means default frmo level
+    private int maxCellars = -1;        // -1 means default from level
     private char fillerBlock;           // Block used to fill/close areas. Usually the block of the building itself
-    private float prefersLonely = 0.0f; // The chance this this building is alone. If 1.0f this building wants to be alone all the time
+    private float prefersLonely = 0.0f; // The chance this building is alone. If 1.0f this building wants to be alone all the time
 
     private final List<Pair<Predicate<ConditionContext>, String>> parts = new ArrayList<>();
     private final List<Pair<Predicate<ConditionContext>, String>> parts2 = new ArrayList<>();

@@ -1,7 +1,7 @@
 package mcjty.lostcities.api;
 
 /**
- * The type of a railway at this spot
+ * The type of railway at this spot
  */
 public enum RailChunkType {
     NONE(false, false),

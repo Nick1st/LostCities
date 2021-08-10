@@ -280,7 +280,7 @@ public class ForgeEventHandlers {
             return;
         }
         BlockPos bedLocation = event.getPos();
-        if (!isValidSpawnBed(world, bedLocation)) {
+        if (bedLocation == null || !isValidSpawnBed(world, bedLocation)) {
             return;
         }
 
